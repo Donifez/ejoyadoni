@@ -1,0 +1,485 @@
+
+@import '../abstracts/mixins';
+
+div.artistpage_wrapper{
+    font-family:var(--default-font);
+    
+   width: 100rem;
+   
+   background: var(--color-white);
+//    overflow-y:scroll;
+
+   @include respond(tab-land){
+    width:100rem;
+    height:130rem;
+}
+@include respond(android-phone){
+     width:355px;
+
+}
+//    overflow-x: hidden;
+    div.top_page{
+     width:105rem;
+     height:30rem;
+     
+   @include respond(tab-land){
+    width:100rem;
+    height:130rem;
+}
+@include respond(android-phone){
+    width:355px;
+
+}
+     .top_image{
+        height: 6.1rem;
+         width: 6.1rem;
+        border-radius: 8px;
+        position:absolute;
+        top:5rem;
+        left:33rem;
+        @include respond(tab-land){
+           left:10rem;
+        }
+        @include respond(android-phone){
+            left:6rem;
+            
+       }
+     }
+     .Artist_name{
+        font-family: var(--font-display-3);
+        font-size: 3.6rem;
+        font-weight: 300;	
+        line-height: 36px;
+        position:relative;
+        left:8rem;
+        top:1rem;
+        @include respond(tab-land){
+            left:13rem;
+            top:4rem;
+         }
+
+        span{
+        position:relative;
+        top:-2.0rem;
+        font-size: 1.4rem;
+        font-style: italic;
+        font-weight: 500;
+        line-height: 18px;
+        }
+      
+     }
+     .view{
+        height: 4.8rem;
+        width: 20.6rem;
+        border-radius: 4px;
+        background-color: #000000;
+        color:var(--color-white);
+        position:absolute;
+        left:113rem;
+        top:5rem;
+        border: none;
+        
+        @include respond(tab-land){
+            left:75rem;
+        }
+        @include respond(android-phone){
+           width:10rem;
+           top:12rem;
+            left:16rem;
+         }
+     
+      
+    }
+    .all_views{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        position:relative;
+        top:10rem;
+        left:-3rem;
+        @include respond(tab-land){
+            width:100rem;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            left:3rem;
+            grid-gap: 1rem;
+         }
+         @include respond(android-phone){
+           grid-template-columns:1fr;
+           left:6rem;
+         }
+        .streams{
+        height: 20.9rem;
+        width: 24.3rem;
+        border: 1px solid rgba(212,222,226,0.31);
+        border-radius: 4px;	
+        background-color: #FFFFFF;
+        box-shadow: 0 11px 27px 0 rgba(116,119,120,0.09);
+        margin-left:2.0rem;
+        padding-top:4rem; 
+        @include respond(tab-land){
+        width:22rem;
+        margin-left:1rem;
+         }
+        .top_number{
+        height: 5.8rem;	width: 10.1rem;	color: #000000;	font-family: var(--default-font);font-size: 4.8rem;	font-weight: 800;	line-height: 58px;
+        }
+        .top_streams{
+        	height: 2.9rem;	width: 10.0rem;	color: #000000;	font-family: var(--default-font);	font-size: 2.4rem;	line-height: 2.9rem;	text-align: center;
+        }
+        .duration {
+            height: 1.5rem;	width: 14.9rem;	color: #000000;	font-family: var(--default-font);	font-size: 1.2rem;	font-weight: 300;	line-height: 1.5rem;margin-top:2.0rem;
+           
+        }
+      
+        }
+        .fans{
+            height: 20.9rem;
+            width: 24.3rem;
+            border: 1px solid rgba(212,222,226,0.31);
+            border-radius: 4px;	
+            background-color: #FFFFFF;
+            box-shadow: 0 11px 27px 0 rgba(116,119,120,0.09);
+            margin-left:2.0rem; 
+            padding-top:4rem; 
+            @include respond(tab-land){
+                width:22rem;
+                margin-left:1rem;
+                 }
+            .top_number{
+             height: 5.8rem;	width: 10.1rem;	color: #000000;	font-family: var(--default-font);font-size: 4.8rem;	font-weight: 800;	line-height: 58px;
+                }
+         .top_streams{
+          height: 2.9rem;	width: 10.0rem;	color: #000000;	font-family: var(--default-font);font-size: 2.4rem;	line-height: 2.9rem;	text-align: center;
+          }
+          .duration{
+            height: 1.5rem;	width: 14.9rem;	color: #000000;	font-family: var(--default-font);	font-size: 1.2rem;	font-weight: 300;	line-height: 1.5rem;margin-top:2.0rem;
+           
+        }
+
+            } 
+        .apple{
+        height: 20.9rem;
+        width: 24.3rem;
+        border: 1px solid rgba(212,222,226,0.31);
+        border-radius: 4px;	
+        background-color: #FFFFFF;
+        box-shadow: 0 11px 27px 0 rgba(116,119,120,0.09);
+        margin-left:2.0rem;
+        padding-top:4rem; 
+        @include respond(tab-land){
+            width:22rem;
+            margin-left:1rem;
+             }
+        .dot {
+            
+            display: inline-block;
+          }
+        .streaming_company{
+            height: 2.9rem;	width: 17.0rem;	color: #000000;	font-family: var(--default-font);font-size: 2.4rem;	line-height: 2.9rem;	text-align: center;
+        }
+            .performance{
+                height: 1.5rem;	width: 30rem;	color: #000000;	font-family: var(--default-font);font-size: 1.2rem;	font-weight: 300;	line-height: 1.5rem;margin-top:20px; position:relative; right:3rem;
+            }
+        
+         } 
+         .most_streamed{
+         height: 20.9rem;
+         width: 24.3rem;
+         border: 1px solid rgba(212,222,226,0.31);
+         border-radius: 4px;	
+         background-color: #FFFFFF;
+         box-shadow: 0 11px 27px 0 rgba(116,119,120,0.09);
+         margin-left:20px;
+         padding-top:4rem; 
+          @include respond(tab-land){
+            width:22rem;
+            margin-left:1rem;
+             }
+
+         .performance{
+            height: 1.5rem;	width: 30rem;	color: #000000;	font-family: var(--default-font);font-size: 12px;	font-weight: 300;	line-height: 1.5rem;margin-top:2rem; position:relative; right:3rem;
+         } 
+    
+        }
+       
+    }
+    .artist_activity{
+        position:relative;
+        top:15rem;
+        font-size:3.6rem;
+        left:-1rem;
+        @include respond(tab-land){
+            left:5rem;
+             }
+    }
+    .view_artist{
+        height: 4.8rem;	width: 20.8rem;	border: 1px solid #D4DEE2;	border-radius: 4px;	background-color: #F2F5F6; position:relative;
+        left:80rem; top:11rem; 	color: #000000;	font-family: var(--default-font);font-size: 13px;	font-weight: 600;	line-height: 16px; 
+        @include respond(android-phone){
+            left:6rem;
+            top:15rem;
+           }
+     
+    }
+       
+       }
+       div.table_below{
+            	border: 1px solid rgba(212,222,226,0.31);	border-radius: 4px;	background-color: #FFFFFF;	box-shadow: 0 11px 27px 0 rgba(116,119,120,0.09); top:60rem;
+            right:2rem;
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr ;
+           border: 1px solid #DADADA;
+         
+           position: absolute;
+         width: 103rem;
+        height: 20rem;
+        
+        @include respond(android-phone){
+           width:35rem;
+           top:120rem;
+          }
+        .description{
+            height: 15px;	width: 9.8rem;	color: rgba(0,0,0,0.61);	font-family: var(--default-font);	font-size: 12px;	font-weight: 500;	letter-spacing: 1.71px;	line-height: 17px; position:relative; left:3rem; top:5rem;
+       }    
+       .date{
+        height: 1.5rem;	width: 9.8rem;	color: rgba(0,0,0,0.61);	font-family: var(--default-font);font-size: 12px;	font-weight: 500;	letter-spacing: 1.71px;	line-height: 15px; position:relative;
+      left:-70rem; top:5rem;
+      @include respond(android-phone){
+        right:19rem;
+       }
+
+       }  
+       .region{
+        height: 1.5rem;	width: 9.8rem;	color: rgba(0,0,0,0.61);	font-family: var(--default-font);font-size: 12px;	font-weight: 500;	letter-spacing: 1.71px;	line-height: 15px;
+        position:relative;
+        right:148rem; top:5rem;
+
+       }
+     
+       .cps{
+        height: 1.5rem;	width: 9.8rem;	color: rgba(0,0,0,0.61);	font-family: var(--default-font);font-size: 12px;	font-weight: 500;	letter-spacing: 1.71px;	line-height: 15px;
+        position:relative;
+        right:229rem; top:5rem;
+       }
+     
+        
+           
+        div.header{
+            display:flex;
+            justify-content:space-evenly;
+              width: 103rem;	border: 1px solid #D4DEE2; padding-top:-5px;
+              @include respond(tab-land){
+                width:100rem;
+                top:3rem;
+                 }
+                 @include respond(android-phone){
+                    width:35rem;
+                    top:130rem;
+                   }
+             
+            .info{
+                width:300px;
+                position:relative;
+                top:-6rem;
+                left:3rem;
+                height: 16px;	width: 235px;	color: #000000;	font-family: var(--default-font);font-size: 13px;	line-height: 16px; font-weight:bold;
+                span{
+                    font-weight:12px;
+                    font-weight:normal;
+                }
+            }
+            .dates{
+                width:30rem;
+                position:relative;
+                top:-6rem;
+                left:12rem;
+                color: #000000;	font-family: var(--default-font);font-size: 13px;	line-height: 16px; 
+            }
+            .location{
+                width:30rem;
+                position:relative;
+                top:-6rem; 
+                color: #000000;	font-family: var(--default-font);font-size: 13px;	line-height: 16px; left:9rem;
+            }
+            .space{
+                width:30rem;
+                position:relative;
+                top:-6rem;
+                right:10rem;
+                color: #000000;	font-family: var(--default-font);font-size: 13px;	line-height: 16px; left:4rem;
+            }
+        }
+        div.details2{
+            display:flex;
+            position:relative;
+            top:0.1rem;
+            justify-content:space-evenly;
+            right:103rem;
+          	width: 103rem;	border: 1px solid #D4DEE2; padding-top:-5px;
+               @include respond(android-phone){
+                 width:35rem;
+                 top:120rem;
+                
+         
+            .info2{
+                width:300px;
+                position:relative;
+                top:3rem;
+                left:3rem;
+                height: 16px;	width:23.5rem;	color: #000000;	font-family: var(--default-font);	font-size: 13px;	line-height: 16px; font-weight:bold;
+                span{
+                    font-weight:12px;
+                    font-weight:normal;
+                }
+            }
+            .dates2{
+                width:300px;
+                position:relative;
+                top:3rem;
+                left:12rem;
+                color: #000000;	font-family:var(--default-font);font-size: 13px;	line-height: 16px; 
+            }
+            .location2{
+                width:300px;
+                position:relative;
+                top:3rem; 
+                color: #000000;	font-family: var(--default-font);font-size: 13px;	line-height: 16px; left:9rem;
+            }
+            .space2{
+                width:300px;
+                position:relative;
+                top:3rem;
+                right:10rem;
+                color: #000000;	font-family: var(--default-font);	font-size: 13px;	line-height: 16px; left:4rem;
+            }
+        }
+           }
+           div.details3{
+            display:flex;
+            position:relative;
+            top:10rem;
+            justify-content:space-evenly;
+            right:206rem;
+          	width: 103rem;	border: 1px solid #D4DEE2; padding-top:-5px;
+               @include respond(android-phone){
+                width:35rem;
+              
+              }
+          
+            .info3{
+                width:300px;
+                position:relative;
+                top:3rem;
+                left:3rem;
+                height: 16px;	width: 23.5rem;	color: #000000;	font-family: var(--default-font);	font-size: 13px;	line-height: 16px; font-weight:bold;
+                span{
+                    font-weight:12px;
+                    font-weight:normal;
+                }
+            }
+            .dates3{
+                width:300px;
+                position:relative;
+                top:3rem;
+                left:12rem;
+                color: #000000;	font-family:var(--default-font);font-size: 13px;	line-height: 16px; 
+            }
+            .location3{
+                width:300px;
+                position:relative;
+                top:3rem; 
+                color: #000000;	font-family: var(--default-font);font-size: 13px;	line-height: 16px; left:9rem;
+            }
+            .space3{
+                width:300px;
+                position:relative;
+                top:3rem;
+                right:10rem;
+                color: #000000;	font-family: var(--default-font);font-size: 13px;	line-height: 16px; left:4rem;
+            }
+        }
+        div.details4{
+            display:flex;
+            position:relative;
+            top:20rem;
+            justify-content:space-evenly;
+            right:309rem;
+          	width: 103rem;	border: 1px solid #D4DEE2; padding-top:-5px;
+           
+         
+            .info4{
+                width:300px;
+                position:relative;
+                top:3rem;
+                left:3rem;
+                height: 16px;	width: 23.5rem;	color: #000000;	font-family: var(--default-font);	font-size: 13px;	line-height: 16px; font-weight:bold;
+                span{
+                    font-weight:12px;
+                    font-weight:normal;
+                }
+            }
+            .dates4{
+                width:300px;
+                position:relative;
+                top:3rem;
+                left:12rem;
+                color: #000000;	font-family: var(--default-font);	font-size: 13px;	line-height: 16px; 
+            }
+            .location4{
+                width:300px;
+                position:relative;
+                top:3rem; 
+                color: #000000;	font-family: var(--default-font);	font-size: 13px;	line-height: 16px; left:9rem;
+            }
+            .space4{
+                width:300px;
+                position:relative;
+                top:3rem;
+                right:10rem;
+                color: #000000;	font-family: var(--default-font);	font-size: 13px;	line-height: 16px; left:4rem;
+            }
+        }
+        div.details4{
+            display:flex;
+            position:relative;
+            top:20rem;
+            justify-content:space-evenly;
+            right:309rem;
+          	width: 120rem;	border: 1px solid #D4DEE2; padding-top:-5px;
+             
+            .info4{
+                width:30rem;
+                position:relative;
+                top:3rem;
+                left:3rem;
+                height: 16px;	width: 235px;	color: #000000;	font-family: var(--default-font);	font-size: 13px;	line-height: 16px; font-weight:bold;
+                span{
+                    font-size:12px;
+                    font-weight:normal;
+                }
+            }
+            .dates4{
+                width:30rem;
+                position:relative;
+                top:3rem;
+                left:12rem;
+                color: #000000;	font-family:var(--default-font);	font-size: 13px;	line-height: 16px; 
+            }
+            .location4{
+                width:30rem;
+                position:relative;
+                top:3rem; 
+                color: #000000;	font-family: var(--default-font);	font-size: 13px;	line-height: 16px; left:9rem;
+            }
+            .space4{
+                width:30rem;
+                position:relative;
+                top:3rem;
+                right:10rem;
+                color: #000000;	font-family: var(--default-font);	font-size: 13px;	line-height: 16px; left:4rem;
+            }
+        }
+         
+       }
+    }
+     
+    
