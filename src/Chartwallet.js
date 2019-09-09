@@ -1,38 +1,49 @@
-import React, {Component} from "react";
-import {Bar,Line} from "react-chartjs-2";
-import "./scss/components/__chartwallet.scss";
-class Chart extends Component{
-    constructor(props){
-super(props);
-this.state={
-chartData:{
-labels:["Aug 10", "Aug 20", "Aug 30", 'Sept 10', "Sept 20"],
-
-dataSets:[{
-    label:"Revenue",
-     data:[
-         "7.3","7.3","7.3","7.3", "7.3"
-     ],
-     backgroundColor:[
-         "green",
-     ]
-}]
-}
-}       
-   }
-    render(){
-        return(
-            <div className="chart_wrapper">
-          <Bar
-            data={this.state.chartData}
-            width={300}
-            height={50}
-            options={{maintainAspectRatio:false}}
 
 
+import React from 'react';
+import  './scss/components/__chartwallet.scss';
 
-          />
+const BarChart = require('react-chartjs-2').Bar;
 
+class Chart extends React.Component {
+    constructor() {
+        super();
+        const data = {
+            labels: ["August 10", "August 20", "August 30", "September 10", "September 20",],
+            datasets: [{
+                label: "Total Revenue",
+                backgroundColor: [
+                    ' #54DFC5;',
+                    ' #54DFC5;',
+                    ' #54DFC5;',
+                    ' #F0F0F0;'
+               
+                ],
+              
+              
+                data: [35, 20, 30, 45, 26, 60],
+            }]
+        };
+        const options = {
+            scales: {
+                xAxes: [{
+                    stacked: true
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            }
+        };
+        this.state = {
+            chartData: data,
+            chartOptions: options,
+        };
+    }
+    render() {
+        const { chartData, chartOptions } = this.state;
+        return (
+            <div>
+                <BarChart data={chartData} options={chartOptions} width="300" height="450" />
             </div>
         )
     }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink,Route,BrowserRouter as Router } from 'react-router-dom';
 import { FiArrowRightCircle, FiTarget } from 'react-icons/fi';
 // import Pending from "../../components/mainContent/_pendingTrack";
-import Notification from "../../notification"; 
+// import Notification from "../../notification"; 
 import Wallet from "../../wallet"; 
 // import ArtistPage from "../../artistPage"; 
 // import AllUser from ".././../allUser";
@@ -94,7 +94,7 @@ class DashBoardIndex extends Component {
 					<div>
 
 					<Router>
-					<Route exact to="/notification"  component={Notification}/>
+					<Route exact to="/wallet"  component={Wallet}/>
 	              </Router>
 					</div>
 				</section>

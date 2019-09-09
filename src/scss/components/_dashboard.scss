@@ -172,11 +172,11 @@ section.dashboard__content {
 		padding: 2rem;
 	}
 
-	display: flex;
+	display: block;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	overflow: hidden;
+	// overflow: hidden;
 
 	padding: 5rem;
 }

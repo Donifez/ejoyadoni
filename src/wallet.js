@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Chart from "./Chartwallet";
 import './scss/components/_wallet.scss';
+import Group from "./images/Group.svg";
+import Head from "./images/head.svg";
+import Money from "./images/Money.svg";
 // import InfoDetail from'./scss/components/InfoDetail';
 
 
@@ -9,86 +12,121 @@ class Wallet extends Component {
      
       return (
           <div className="wallet_wrapper">
-          <p className="transaction_history">Transaction history</p>
-          <div className="wallet_container">
-          <div className="transaction_info">
+          <div className="wallet_top">
+             < div className = "wallet_name" > <p> Your Wallet </p>
+              </div>
+          
+             < div className="wallet_button" >
+              < img className="button2" src={Head} alt />
+                 < img className ="button1" src = {Group} alt / >
+
                 
-                <div className="date_div">
-                  <p className="date-header">Date</p>
-                   <p className="datecontent">7/30/2019</p> 
-                </div>
-                 <div className="summary_div">
-                  <p className="summary-header">Summary</p>
-                   <p className="summarycontent"> Lorem ipsum dolor sit amet, consectetur adipiscing </p>
-                 </div>
-
-                 <div className="date_div odd">
-                   <p className="datecontent">7/30/2019</p> 
-                </div>
-                 <div className="summary_div odd">
-                   <p className="summarycontent"> Lorem ipsum dolor sit amet, consectetur adipiscing </p>
-                 </div>
-
-                 <div className="date_div even">
-                   <p className="datecontent">7/30/2019</p> 
-                </div>
-                 <div className="summary_div even">
-                   <p className="summarycontent"> Lorem ipsum dolor sit amet, consectetur adipiscing </p>
-                 </div>
+                   < button className ="back_home" >Back to Home </button>
+             </div>
 
 
-                 <div className="date_div odd">
-                   <p className="datecontent">7/30/2019</p> 
-                </div>
-                 <div className="summary_div odd">
-                   <p className="summarycontent"> Lorem ipsum dolor sit amet, consectetur adipiscing </p>
-                 </div>
+            < div className="current_balance" >
+             <p> Current Balance </p> 
+            </div>
 
-                 <div className="date_div even">
-                   <p className="datecontent">7/30/2019</p> 
-                </div>
-                 <div className="summary_div even">
-                   <p className="summarycontent"> Lorem ipsum dolor sit amet, consectetur adipiscing </p>
-                 </div>
-              
-              
+            < div className="profile_settings" >
+              < button className="profile_settings_button"><p> Profile Settings </p> <p> Sign Out </p></button>
+            </div>
 
-                 
-                 
-               {/* <p className="summary-header">Summary</p>
-               <div className="all_info">
-                   
-               </div>
-               <div className="all_info2">
-               <p className="date2">7/30/2019</p>       <p className="summary2"> Lorem ipsum dolor sit amet, consectetur adipiscing </p>
-               </div>
-               <div className="all_info3">
-               <p className="date3">7/30/2019</p>       <p className="summary3"> Lorem ipsum dolor sit amet, consectetur adipiscing </p>
-               </div>
-               <div className="all_info4">
-               <p className="date4">7/30/2019</p>       <p className="summary4"> Lorem ipsum dolor sit amet, consectetur adipiscing </p>
-               </div>
-               <div className="all_info5">
-               <p className="date5">7/30/2019</p>       <p className="summary5"> Lorem ipsum dolor sit amet, consectetur adipiscing </p>
-               </div>
-               <div className="all_info6">
-               <p className="date6">7/30/2019</p>       <p className="summary6"> Lorem ipsum dolor sit amet, consectetur adipiscing </p>
-               </div>
-               <div className="all_info7">
-               <p className="date7">7/30/2019</p>       <p className="summary7"> Lorem ipsum dolor sit amet, consectetur adipiscing </p> */}
-               {/* </div> */}
-               {/* <InfoDetail/>  */}
-
-          </div>
-       <div className="chart_view">
-       <Chart/>
-
-       </div>
-       </div>
          
-              
-              
+
           </div>
+
+          < div className="second_layer">
+          
+
+          < div className="balance" >
+            <p> $13,856</p>
+          </div>
+       
+          < div className="wallet_button" >
+            < button className="withdraw_button" >< img className="money" src={Money} alt />Withdraw </button>
+          </div>
+
+          < div className="Royalties_Tracker" >
+            <p> Royalties Tracker </p>
+              <p className="total_revenue"> Total Revenue </p> 
+              <p className="total_revenue"> $6500 </p> 
+          </div>
+
+          </div>
+
+          < div className="bottom">
+
+            < div className="Header" >
+              <p className="bottom_header"> Transaction History </p>
+              <select className="bottom_filter"> <option>Filter
+                </option> </select> 
+            </div>
+      
+
+            <div className="Table">
+              <table>
+                <tr>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Reference no</th>
+                  <th>Summary</th>
+                </tr>
+                <tr>
+                  <td>7/10/2019</td>
+                  <td>11:34</td>
+                  <td>12426272784939483</td>
+                  <td>Withdrew $10</td>
+                </tr>
+                <tr>
+                  <td>7/10/2019</td>
+                  <td>11:34</td>
+                  <td>12426272784939483</td>
+                  <td>Withdrew $10</td>
+                </tr>
+                <tr>
+                  <td>7/10/2019</td>
+                  <td>11:34</td>
+                  <td>12426272784939483</td>
+                  <td>Withdrew $10</td>
+                </tr>
+                <tr>
+                  <td>7/10/2019</td>
+                  <td>11:34</td>
+                  <td>12426272784939483</td>
+                  <td>Withdrew $10</td>
+                </tr>
+                <tr>
+                  <td>7/10/2019</td>
+                  <td>11:34</td>
+                  <td>12426272784939483</td>
+                  <td>Withdrew $10</td>
+                </tr>
+                <tr>
+                  <td>7/10/2019</td>
+                  <td>11:34</td>
+                  <td>12426272784939483</td>
+                  <td>Withdrew $10</td>
+                </tr>
+              </table>
+
+
+            </div>
+            <div>
+              <button className="below_button">View all</button>
+            </div>
+
+            < div className="chart">
+              <Chart />
+              </div>
+      
+          </div>
+
+
+
+       </div>
+      
       )
     }
     };
